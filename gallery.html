@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery - Ahmad Nawaz</title>
+
+</head>
+<style>
+    /* Shared stylesheet for the S6 website */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f4f6f8;
+}
+
+header, footer {
+    padding: 20px;
+    text-align: center;
+    background: #173b57;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.image-cards {
+    width: min(1100px, 100%);
+    margin: 28px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.image-card {
+    min-width: 0;
+    overflow: hidden;
+    padding: 18px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.image-card h2 {
+    margin-top: 0;
+}
+
+.background-card {
+    display: flex;
+    align-items: center;
+    min-height: 320px;
+    color: #fff;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+        url("image/1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.background-card-content {
+    position: relative;
+}
+
+.grayscale-image,
+.clickable-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.grayscale-image {
+    filter: grayscale(100%);
+}
+
+.clickable-image {
+    transition: transform 0.2s ease;
+}
+
+.clickable-image:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+@media (max-width: 760px) {
+    .image-cards {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+
+    .background-card {
+        min-height: 260px;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+        <p>Three ways to display images with CSS.</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <main class="image-cards">
+        <section class="image-card background-card">
+            <div class="background-card-content">
+                <h2>Nature Background</h2>
+                <p>This card uses the first gallery image as a faded background. The image appears behind the text, while the overlay keeps the heading and description easy to read.</p>
+            </div>
+        </section>
+
+        <section class="image-card">
+            <h2>Grayscale Image</h2>
+            <img class="grayscale-image" src="image/2.jpg" alt="The second photograph in the gallery, displayed in grayscale">
+            <p>This photograph is converted to black and white with the CSS grayscale filter.</p>
+        </section>
+
+        <section class="image-card">
+            <h2>Open Full-Size Image</h2>
+            <a href="image/3.jpg" target="_blank" rel="noopener">
+                <img class="clickable-image" src="image/3.jpg" alt="The third photograph in the gallery; click to open the original full-size image">
+            </a>
+            <p>Click the photograph to open the original full-size image in a separate browser tab.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Original author: Basics of Web Development</p>
+        <p>Modified by: Ahmad Nawaz</p>
+    </footer>
+</body>
+</html>
