@@ -1,72 +1,97 @@
+<!--
+modified by Ahmad Nawaz 
+-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Basics of Web Development - Ahmad Nawaz</title>
-
+    <meta name="author" content="Ville Heikkiniemi">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="fav.jpg">
+
+    <title>Centria Edu | Basics of Web Development</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Basics of Web Development</h1>
-        <p>Welcome to my web development learning page.</p>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+
+                <ul>
+                    <li><a href="index.html"><strong>Home</strong></a></li>
+                    <li><a href="#topics">Topics</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
 
-        <div class="card">
-            <h2>About Me</h2>
-            <p>
-                My name is Ahmad Nawaz. I am learning the basics of web
-                development and practicing HTML, CSS, and GitHub.
-            </p>
-        </div> 
-         <div class="card">
-            <h2>Gallery</h2>
-            <p>
-               <a id="gale" href="gallery.html"> Gallery</a>
-            </p>
-        </div>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
 
-        <div class="card">
-            <h2>My Learning</h2>
-            <p>Here are some tools and technologies I have learned:</p>
+                    <span class="label">Basics of Web Development</span>
 
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Visual Studio Code</li>
-                <li>Live Server</li>
-                <li>GitHub Pages</li>
-            </ul>
-        </div>
+                    <h1>
+                        Learn how the web works.
+                    </h1>
 
-        <div class="card">
-            <h2>My Work Process</h2>
-            <p>These are the basic steps I follow when creating a website:</p>
+                    <p>
+                        Start from HTML and CSS and gradually build modern,
+                        responsive and interactive web applications.
+                    </p>
 
-            <ol>
-                <li>Create the HTML structure.</li>
-                <li>Add CSS styling to the webpage.</li>
-                <li>Test the website using Live Server.</li>
-                <li>Upload the project to GitHub.</li>
-                <li>Publish the website using GitHub Pages.</li>
-            </ol>
-        </div>
+                    <a href="#topics" class="button">
+                        Start learning
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="topics" id="topics">
+            <div class="container">
+
+                <h2>What we will learn</h2>
+
+                <div class="cards">
+
+                    <article class="card">
+                        <h3>HTML</h3>
+                        <p>
+                            Learn how to structure web pages using semantic HTML.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>CSS</h3>
+                        <p>
+                            Learn how to style layouts, colors, typography and
+                            responsive interfaces.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <footer>
-        <p>Original author: Basics of Web Development</p>
-        <p>Modified by: Ahmad Nawaz</p>
+        <div class="container">
+            <p>modified by Ahmad Nawaz</p>
+            <p>&copy; 2026 Centria Edu</p>
+        </div>
     </footer>
 
 </body>
 </html>
-
